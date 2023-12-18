@@ -1,5 +1,5 @@
 body{
-    background-color: #c5fafa;
+    background-color: #515252;
     margin: 0;
 }
 
@@ -8,7 +8,7 @@ body{
 }
 
 h1{
-    background-color: rgb(127, 127, 224);
+    background-color: #D0ECE7;
     text-shadow: 1px 1px 2px black;
     max-width: 80%;
     color: rgb(252, 149, 85);
@@ -23,7 +23,6 @@ h1{
 
 .container{
     display: grid;
-    /* grid-template-columns: repeat(18,1fr); */
     max-width: 80%;
     height: auto;
     margin: 1% auto auto auto;
@@ -34,55 +33,66 @@ h1{
 
 .grid{
     display: grid;
-    background-color: red;
 }
 
 .grid1{
-    grid-area: 1 / 1 / 8 / 2;
-    background-color: rgb(235, 208, 156);
+    grid-area: 1 / 1 / 8 / 2; 
 }
 .grid2{
     grid-area: 2 / 2 / 8 / 3;
-    background-color: rgb(255, 199, 130);
 }
 .grid3{
     grid-template-columns: repeat(10,1fr);
     grid-area: 4 / 3 / 8 / 13;
-    background-color: rgb(254, 187, 254);
 }
 .grid4{
     grid-template-columns: repeat(5,1fr);
     grid-area: 2 / 13 / 8 / 18;
-    background-color: pink;
 }
 .grid5{
     grid-area: 1 / 18 / 8 / 19;
-    background-color: rgb(244, 226, 244);
 }
 .grid6{
-
     grid-template-columns: repeat(14,1fr);
     grid-area: 8 / 3 / 10 / 17;
-    background-color: rgb(203, 238, 150);
 }
-
-.grid1:hover,.grid2:hover,.grid3:hover,.grid4:hover,.grid5:hover,.grid6:hover{
-    box-shadow: 1px 1px 2px black, -1px -1px 2px black;
-}
-
 
 /* items styling */
+
+.item1{
+    background-image: linear-gradient(45deg,#f0aa91,#DAF7A6 );
+}
+
+.item2{
+    background-image: linear-gradient(45deg,rgb(165, 231, 137),#ffffff);
+}
+
+.item3{
+    background-image: linear-gradient(45deg, rgb(188, 188, 238), rgb(249, 134, 134));
+}
+
+.item4{
+    background-image: linear-gradient(45deg,rgb(145, 231, 145),rgb(231, 231, 162));
+}
+
+.item5{
+    background-image: linear-gradient(45deg,aqua,rgb(127, 127, 214));
+}
+
+.item6{
+    background-image: linear-gradient(45deg,hsl(48, 95%, 75%),white);
+}
 
 .items{
     border: 1px solid black;
 }
 
-.item1{
+.item1,.item2,.item3,.item4,.item5,.item6{
     position: relative;
     text-align: center;
 }
 
-.item1 p{
+.item1 p,.item2 p,.item3 p,.item4 p,.item5 p,.item6 p{
     position: absolute;
     left: 0.3em;
     top: -0.8em;
@@ -100,13 +110,14 @@ h1{
     box-shadow: 1px 1px 5px black;
     font-weight: bold;
     animation-name: hovering;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 @keyframes hovering{
     to{
-        background-color: #07fd1ce0;
+        transform: scale(1.1,1.1);
     }
 }
