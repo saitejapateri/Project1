@@ -1,0 +1,112 @@
+body{
+    background-color: #c5fafa;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: rgb(127, 127, 224);
+    text-shadow: 1px 1px 2px black;
+    max-width: 80%;
+    color: rgb(252, 149, 85);
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 0.2rem;
+}
+
+
+/* container styling */
+
+.container{
+    display: grid;
+    /* grid-template-columns: repeat(18,1fr); */
+    max-width: 80%;
+    height: auto;
+    margin: 1% auto auto auto;
+    text-align: center;
+}
+
+/* grid styling */
+
+.grid{
+    display: grid;
+    background-color: red;
+}
+
+.grid1{
+    grid-area: 1 / 1 / 8 / 2;
+    background-color: rgb(235, 208, 156);
+}
+.grid2{
+    grid-area: 2 / 2 / 8 / 3;
+    background-color: rgb(255, 199, 130);
+}
+.grid3{
+    grid-template-columns: repeat(10,1fr);
+    grid-area: 4 / 3 / 8 / 13;
+    background-color: rgb(254, 187, 254);
+}
+.grid4{
+    grid-template-columns: repeat(5,1fr);
+    grid-area: 2 / 13 / 8 / 18;
+    background-color: pink;
+}
+.grid5{
+    grid-area: 1 / 18 / 8 / 19;
+    background-color: rgb(244, 226, 244);
+}
+.grid6{
+
+    grid-template-columns: repeat(14,1fr);
+    grid-area: 8 / 3 / 10 / 17;
+    background-color: rgb(203, 238, 150);
+}
+
+.grid1:hover,.grid2:hover,.grid3:hover,.grid4:hover,.grid5:hover,.grid6:hover{
+    box-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+
+
+/* items styling */
+
+.items{
+    border: 1px solid black;
+}
+
+.item1{
+    position: relative;
+    text-align: center;
+}
+
+.item1 p{
+    position: absolute;
+    left: 0.3em;
+    top: -0.8em;
+    font-size: smaller;
+}
+
+
+.items h6{
+    position: absolute;
+    left: 1em;
+    top: 1.5em;
+}
+
+.items:hover{
+    box-shadow: 1px 1px 5px black;
+    font-weight: bold;
+    animation-name: hovering;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hovering{
+    to{
+        background-color: #07fd1ce0;
+    }
+}
